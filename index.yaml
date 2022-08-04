@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  telegraf:
+  - apiVersion: v2
+    appVersion: 1.23.3
+    created: "2022-08-04T12:37:41.523054129Z"
+    description: InfluxDB Telegraf
+    digest: 081f0fc6efb392c879ce2d028a29ec22b6114e94b7fa4b5cd5a2a97b11f48412
+    home: https://github.com/muhlba91/telegraf-chart
+    keywords:
+    - telegraf
+    - influxdb
+    maintainers:
+    - email: daniel.muehlbachler@niftyside.io
+      name: Daniel Muehlbachler-Pietrzykowski
+    name: telegraf
+    sources:
+    - https://github.com/muhlba91/telegraf-chart
+    type: application
+    urls:
+    - https://github.com/muhlba91/telegraf-chart/releases/download/chart/telegraf/v1.0.1/telegraf-1.0.1.tgz
+    version: 1.0.1
+generated: "2022-08-04T12:37:41.523060929Z"
