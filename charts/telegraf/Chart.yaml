@@ -1,0 +1,21 @@
+---
+apiVersion: v2
+
+name: telegraf
+description: InfluxDB Telegraf
+type: application
+
+home: https://github.com/muhlba91/telegraf-chart
+sources:
+  - https://github.com/muhlba91/telegraf-chart
+keywords:
+  - telegraf
+  - influxdb
+
+maintainers:
+  - name: Daniel Muehlbachler-Pietrzykowski
+    email: daniel.muehlbachler@niftyside.io
+
+appVersion: 1.23.3
+# NOTE: this value is updated by the release process
+version: 0.0.0

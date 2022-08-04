@@ -1,0 +1,71 @@
+---
+image:
+  repository: telegraf
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+extraEnv: []
+  # - name: VARIABLES
+  #   value: value
+
+# You can pass additional configuration or plugins through volume mounts.
+additionalVolumes: []
+additionalVolumeMounts: []
+
+# The telegraf configuration will be stored as a Secret
+configuration: |
+  [global_tags]
+    instance = "dev"
+
+  [[inputs.influxdb_v2_listener]]
+    service_address = ":8086"
+
+  [[outputs.influxdb_v2]]
+    urls = ["http://influxdb:8086"]
+    token = "token"
+    organization = "organization"
+    bucket = "bucket"
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+services: []
+  # - name: http
+  #   protocol: TCP
+  #   ipFamilyPolicy: SingleStack
+  #   ports:
+  #     - name: http
+  #       port: 8086
+  #       containerPort: 8086
+  #   type: ClusterIP
+  #   loadBalancerIP: ""
+  #   annotations: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+initContainers: []
