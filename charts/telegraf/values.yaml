@@ -21,7 +21,7 @@ extraEnv: []
 additionalVolumes: []
 additionalVolumeMounts: []
 
-# The telegraf configuration will be stored as a Secret
+# The telegraf configuration will be stored as a Secret.
 configuration: |
   [global_tags]
     instance = "dev"
